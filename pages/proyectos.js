@@ -30,7 +30,7 @@ const Proyectos = ({ projects }) => {
   )
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const resp = await fetch("http://edsoft.vercel.app/api/projects")
   const projects = await resp.json()
 
